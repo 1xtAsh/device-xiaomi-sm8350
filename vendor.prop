@@ -56,6 +56,9 @@ ro.surface_flinger.enable_frame_rate_override=false
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
