@@ -74,6 +74,7 @@ vendor.display.use_layer_ext=0
 
 # Media
 ro.config.vc_call_vol_steps=11
+persist.mm.enable.prefetch=true
 
 # NFC
 ro.vendor.nfc.repair=1
