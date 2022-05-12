@@ -4,6 +4,9 @@ vendor.bluetooth.soc=hastings
 # Charger
 ro.charger.enable_suspend=true
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Graphics
 debug.sf.disable_backpressure=1
 
