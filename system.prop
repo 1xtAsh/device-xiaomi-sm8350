@@ -7,6 +7,9 @@ ro.charger.enable_suspend=true
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
 
+# Disable Skia tracing by default
+debug.hwui.skia_atrace_enabled=false
+
 # Graphics
 debug.sf.disable_backpressure=1
 
