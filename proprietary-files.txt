@@ -121,6 +121,12 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.lahaina.so
 
+# Diag HAL
+-vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc
+vendor/lib64/vendor.qti.diaghal@1.0.so
+
 # Display - from XQ-BC72 61.2.A.0.410
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
 vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
