@@ -40,6 +40,9 @@ persist.log.tag.CamX=S
 persist.log.tag.SYNX-UMD=S
 persist.log.tag.CHIUSECASE=S
 
+# LMK
+ro.config.low_ram=false
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
