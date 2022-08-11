@@ -15,11 +15,6 @@ ro.config.avoid_gfx_accel=true
 # FS-verity
 ro.apk_verity.mode=2
 
-# IMS
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-
 # Log
 persist.log.tag.ACDB-LOADER=S
 persist.log.tag.RippleDrawable=S
