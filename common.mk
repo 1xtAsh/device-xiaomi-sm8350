@@ -92,7 +92,7 @@ PRODUCT_COPY_FILES += \
 
 # display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@3.0.vendor 
+    android.hardware.graphics.allocator@3.0.vendor
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -106,7 +106,7 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor \
     libcrypto-v33
 
