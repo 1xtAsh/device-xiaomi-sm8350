@@ -79,6 +79,9 @@ ro.config.vc_call_vol_steps=11
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
 
+# Perf
+ro.vendor.perf.scroll_opt=true
+
 # Radio
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.data_ltd_sys_ind=1
