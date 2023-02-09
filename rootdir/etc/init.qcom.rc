@@ -192,6 +192,9 @@ on post-fs-data
     chmod 2770 /data/vendor/perfd
     rm /data/vendor/perfd/default_values
 
+    # Change lm related dirs
+    mkdir /data/vendor/lm 0700 root root
+
     mkdir /data/vendor/secure_element 0777 system system
 
     # Mark the copy complete flag to not completed
