@@ -31,6 +31,10 @@ persist.log.tag.BitmapFactory=S
 persist.log.tag.minksocket=S
 persist.log.tag.QTI PowerHal=S
 persist.log.tag.QC-time-services=S
+persist.log.tag.CVP=S
+persist.log.tag.CamX=S
+persist.log.tag.SYNX-UMD=S
+persist.log.tag.CHIUSECASE=S
 
 # Media
 media.aac_51_output_enabled=true
