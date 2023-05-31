@@ -27,6 +27,9 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service      u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
 /dev/mi_display/disp_feature                                              u:object_r:graphics_device:s0
 
+# FPS info
+/sys/class/drm/card0/sde-crtc-0/measured_fps                         u:object_r:vendor_sysfs_graphics:s0
+
 # IR
 /dev/ir_spi                                      u:object_r:ir_spi_device:s0
 
