@@ -34,7 +34,7 @@ ________________________________________________________________________________
                 <!--Vendor Properties -->
                 <!-- AOSPA Edit: Comment out IOP
                 <Prop Name="vendor.iop.enable_uxe" Value="1" /> -->
-                <Prop Name="vendor.debug.enable.lm" Value="true" />
+                <Prop Name="vendor.debug.enable.lm" Value="false" />
                 <!-- AOSPA Edit: Comment out IOP
                 <Prop Name="vendor.perf.iop_v3.enable" Value="true" Target="lahaina" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
