@@ -42,7 +42,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" /> -->
                 <!-- AOSPA Edit: Disable IOPd explicitly -->
                 <Prop Name="vendor.iop.enabled" Value="false" />
-                <Prop Name="vendor.iop.enable_speed" Value="true" />
+                <Prop Name="vendor.iop.enable_speed" Value="false" />
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <!-- AOSPA Edit: Disable memperfd
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="shima" />
