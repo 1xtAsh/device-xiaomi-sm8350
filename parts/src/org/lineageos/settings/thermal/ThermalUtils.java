@@ -63,7 +63,7 @@ public final class ThermalUtils {
     private static final String THERMAL_STREAMING = "thermal.streaming=";
     private static final String THERMAL_VIDEO = "thermal.video=";
 
-    private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
+    private static final String THERMAL_SCONFIG = "/sys/devices/virtual/thermal/thermal_message/sconfig";
 
     private Display mDisplay;
     private SharedPreferences mSharedPrefs;
