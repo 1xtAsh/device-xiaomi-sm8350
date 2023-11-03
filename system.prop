@@ -12,7 +12,6 @@ debug.hwui.skia_atrace_enabled=false
 
 # Graphics
 debug.sf.disable_backpressure=1
-debug.sf.enable_hwc_vds=1
 
 # FS-verity
 ro.apk_verity.mode=2
