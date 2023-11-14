@@ -242,8 +242,10 @@ PRODUCT_PACKAGES += \
     Xiaomi8550CarrierConfigRes \
     Xiaomi8550CarrierConfigResMiui \
     Xiaomi8550DeviceAsWebcamRes \
+    Xiaomi8550EuiccGoogle \
     Xiaomi8550Frameworks \
     Xiaomi8550FrameworksAOSPA \
+    Xiaomi8550FrameworksEuicc \
     Xiaomi8550Nfc \
     Xiaomi8550NfcST \
     Xiaomi8550SecureElement \
@@ -286,6 +288,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
+
+# Telephony
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
 
 # Thermal
 PRODUCT_PACKAGES += \

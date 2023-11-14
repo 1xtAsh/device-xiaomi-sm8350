@@ -579,6 +579,9 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# eUICC - from lynx-user 14 UP1A.231005.007
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|f1b7f3906ed81c6555191e6a9d350377b9710f11;PRESIGNED
+
 # Fingerprint
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so;MODULE_SUFFIX=_odm
 vendor/etc/vintf/manifest/fod.xml
