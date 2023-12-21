@@ -11,3 +11,5 @@ allow hal_sensors_default vendor_sysfs_udfps:file rw_file_perms;
 
 hal_client_domain(hal_sensors_default, hal_audio)
 allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
+
+allow hal_sensors_default vendor_diag_device:chr_file rw_file_perms;
