@@ -18,6 +18,10 @@
     <!-- Xiaomi Parts -->
     <string name="app_name">Xiaomi Parts</string>
 
+    <!-- Dolby -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Dolby Atmos Ayarları</string>
+
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Hoparlörü temizle</string>
     <string name="clear_speaker_summary">Hoparlörü temizlemek için 30 saniyelik bir ses çalın</string>
