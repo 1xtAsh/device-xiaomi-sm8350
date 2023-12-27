@@ -268,6 +268,10 @@ frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_V
 frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
 frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Gms
+PRODUCT_PACKAGES += \
+    RemovePackagesGms
+
 # Health
 PRODUCT_PACKAGES += \
 android.hardware.health-service.qti
