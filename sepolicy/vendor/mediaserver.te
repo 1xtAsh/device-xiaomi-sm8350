@@ -1,1 +1,2 @@
 allow mediaserver package_native_service:service_manager { find };
+get_prop(mediaserver, vendor_display_prop)
