@@ -447,6 +447,14 @@ $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_prof
 PRODUCT_COPY_FILES += \
 vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Preopt critical applications
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI \
+    SettingsGoogle \
+    SystemUIGoogle \
+    GoogleDialer
+
 # Protobuf
 PRODUCT_PACKAGES += \
 libprotobuf-cpp-full-3.9.1-vendorcompat
