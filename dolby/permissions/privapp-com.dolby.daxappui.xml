@@ -20,5 +20,7 @@
     <permission name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- Dolby Specific Permissions -->
     <permission name="com.dolby.permission.DOLBY_UPDATE_BROADCAST" />
+    <permission name="com.dolby.permission.DAXSERVICE" />
+    <permission name="com.dolby.daxservice.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
     </privapp-permissions>
 </permissions>
