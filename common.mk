@@ -436,6 +436,10 @@ android.hardware.power-service-qti \
 android.hardware.power@1.2.vendor \
 vendor.qti.hardware.perf@2.2.vendor
 
+# Perf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 PRODUCT_PACKAGES += \
 libssl.vendor
 
