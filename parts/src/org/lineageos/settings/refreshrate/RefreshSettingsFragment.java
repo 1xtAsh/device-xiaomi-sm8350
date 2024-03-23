@@ -36,7 +36,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -50,7 +50,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RefreshSettingsFragment extends PreferenceFragment
+public class RefreshSettingsFragment extends PreferenceFragmentCompat
     implements ApplicationsState.Callbacks {
 
     private AllPackagesAdapter mAllPackagesAdapter;
