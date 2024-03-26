@@ -4,6 +4,9 @@ vendor.bluetooth.soc=hastings
 # CNE
 persist.vendor.cne.feature=1
 
+# Display
+debug.cpurend.vsync=false
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
