@@ -14,6 +14,7 @@ import android.util.Log;
 
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.display.ColorService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -32,5 +33,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Thermal
         ThermalUtils.startService(context);
+
+        // Display-Feature
+        ColorService.startService(context);
     }
 }

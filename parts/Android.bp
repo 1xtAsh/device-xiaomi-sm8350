@@ -20,6 +20,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
+        "//hardware/xiaomi:vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
 
     optimize: {
