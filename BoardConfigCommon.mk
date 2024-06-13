@@ -6,6 +6,8 @@
 
 COMMON_PATH := device/xiaomi/sm8350-common
 
+OVERRIDE_ENABLE_UFFD_GC := true
+
 # A/B
 AB_OTA_UPDATER := true
 
