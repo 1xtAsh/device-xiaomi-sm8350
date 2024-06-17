@@ -4,3 +4,6 @@ hal_client_domain(hal_graphics_composer_default, vendor_hal_displayfeature_xiaom
 
 get_prop(hal_graphics_composer_default, vendor_displayfeature_prop)
 set_prop(hal_graphics_composer_default, vendor_display_prop)
+
+allow vendor_hal_perf_default hal_graphics_composer_default:dir search;
+allow vendor_hal_perf_default hal_graphics_composer_default:file { getattr read open };
