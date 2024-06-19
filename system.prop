@@ -22,6 +22,16 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# Log
+persist.log.tag.ACDB-LOADER=S
+persist.log.tag.RippleDrawable=S
+persist.log.tag.BackupHelper=S
+persist.log.tag.ctbc=S
+persist.log.tag.BitmapFactory=S
+persist.log.tag.minksocket=S
+persist.log.tag.QTI PowerHal=S
+persist.log.tag.QC-time-services=S
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
