@@ -43,6 +43,12 @@ ril.subscription.types=NV,RUIM
 persist.radio.is_vonr_enabled_0=true
 persist.radio.is_vonr_enabled_1=true
 
+# ScreenFlickerFix
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=80
+vendor.display.idle_time=0
+debug.sf.frame_rate_multiple_threshold=60
+
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
