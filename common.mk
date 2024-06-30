@@ -134,7 +134,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    liblz4.vendor
+    liblz4.vendor \
+    libutilscallstack.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
