@@ -156,6 +156,9 @@ ro.soc.manufacturer=QTI
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Deep Sleep
+vendor.post_boot.parsed=1s
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default

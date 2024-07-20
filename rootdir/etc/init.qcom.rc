@@ -229,6 +229,8 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 on property:sys.boot_completed=1
+    # This initializes vendor.qti.hardware.perf service
+    setprop vendor.post_boot.parsed 1
     # Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     # Enable UFS auto_hibern8 back
