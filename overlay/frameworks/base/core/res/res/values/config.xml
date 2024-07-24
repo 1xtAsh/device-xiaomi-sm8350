@@ -304,4 +304,7 @@
 
     <!-- True if the device supports Sustained Performance Mode-->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
+    <!-- Disables pocket mode lock -->
+    <bool name="config_pocketModeSupported">false</bool>
 </resources>
