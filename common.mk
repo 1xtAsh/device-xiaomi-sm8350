@@ -164,7 +164,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0 \
     android.hardware.graphics.allocator@3.0.vendor \
     vendor.display.config@1.15.vendor \
-    vendor.display.config@2.0.vendor
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.config-V5-ndk
 
 PRODUCT_PACKAGES += \
 libdisplayconfig.qti \
