@@ -1,2 +1,9 @@
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
+
+# HBM
+type sysfs_dsi_display_primary;
+allow system_app vendor_sysfs_graphics:file write;
+allow system_app vendor_sysfs_graphics:file setattr;
+allow system_app sysfs_dsi_display_primary:dir search;
+allow system_app sysfs_dsi_display_primary:file write;
