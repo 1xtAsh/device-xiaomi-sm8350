@@ -226,6 +226,7 @@ debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.config.vc_call_vol_steps=11
 persist.mm.enable.prefetch=true
+ro.mediaserver.64b.enable=true
 
 # NFC
 ro.vendor.nfc.repair=1
