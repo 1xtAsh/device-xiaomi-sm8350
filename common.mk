@@ -346,6 +346,14 @@ vendor.lineage.livedisplay@2.0-service-sdm
 # Media
 PRODUCT_PACKAGES += \
 libcodec2_hidl@1.0.vendor \
+libcodec2_hidl@1.2.vendor \
+android.hardware.media.c2@1.1.vendor \
+android.hardware.media.c2@1.2.vendor \
+libavservices_minijail.vendor \
+libavservices_minijail_vendor \
+libcodec2_soft_common.vendor \
+libstagefright_softomx.vendor \
+libstagefright_softomx_plugin.vendor \
 libmm-omxcore \
 libOmxAacEnc \
 libOmxAmrEnc \
