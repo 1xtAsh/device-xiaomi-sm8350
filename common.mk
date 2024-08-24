@@ -513,6 +513,10 @@ frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_
 frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
 frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
+# Tensor Flow Lite
+PRODUCT_PACKAGES += \
+    libtensorflowlite_jni
+
 # Thermal
 ifeq ($(TARGET_USE_QTI_THERMAL_SERVICE),true)
 PRODUCT_PACKAGES += \
