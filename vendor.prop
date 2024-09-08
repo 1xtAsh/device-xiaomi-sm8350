@@ -159,9 +159,6 @@ ro.crypto.volume.metadata.method=dm-default-key
 # Dalvik dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
-# Deep Sleep
-vendor.post_boot.parsed=1s
-
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
