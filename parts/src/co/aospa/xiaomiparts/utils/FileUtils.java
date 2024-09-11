@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.utils;
+package co.aospa.xiaomiparts.utils;
 
 import android.util.Log;
 

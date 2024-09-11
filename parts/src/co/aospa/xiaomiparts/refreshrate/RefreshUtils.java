@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.refreshrate;
+package co.aospa.xiaomiparts.refreshrate;
 
 import android.content.Context;
 import android.content.Intent;
