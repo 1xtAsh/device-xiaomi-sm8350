@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.thermal;
+package co.aospa.xiaomiparts.thermal;
 
 import android.annotation.Nullable;
 import android.content.Context;
@@ -43,7 +43,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
 
-import org.lineageos.settings.R;
+import co.aospa.xiaomiparts.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

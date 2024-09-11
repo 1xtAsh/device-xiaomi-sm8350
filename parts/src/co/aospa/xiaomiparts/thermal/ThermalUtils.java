@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.thermal;
+package co.aospa.xiaomiparts.thermal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,7 +28,7 @@ import android.view.WindowManager;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.utils.FileUtils;
+import co.aospa.xiaomiparts.utils.FileUtils;
 
 public final class ThermalUtils {
 

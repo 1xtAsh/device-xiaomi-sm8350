@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.lineageos.settings.refreshrate;
+package co.aospa.xiaomiparts.refreshrate;
 
 import android.annotation.Nullable;
 import android.content.Context;
@@ -42,7 +42,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
 
-import org.lineageos.settings.R;
+import co.aospa.xiaomiparts.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

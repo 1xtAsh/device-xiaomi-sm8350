@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.lineageos.settings;
+package co.aospa.xiaomiparts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
 
-import org.lineageos.settings.refreshrate.RefreshUtils;
-import org.lineageos.settings.thermal.ThermalUtils;
+import co.aospa.xiaomiparts.refreshrate.RefreshUtils;
+import co.aospa.xiaomiparts.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
