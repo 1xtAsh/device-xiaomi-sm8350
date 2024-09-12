@@ -7,6 +7,22 @@ ro.charger.enable_suspend=true
 # Graphics
 debug.sf.disable_backpressure=1
 
+# Log
+persist.log.tag.ACDB-LOADER=S
+persist.log.tag.BitmapFactory=S
+persist.log.tag.QC-time-services=S
+persist.log.tag.SQLiteDatabase=S
+persist.log.tag.ultrasound_extn=S
+persist.log.tag.msm8974_platform=S
+persist.log.tag.statsd=S
+persist.log.tag.CamX=S
+persist.log.tag.AppOps=S
+persist.log.tag.FrameEvents=S
+persist.log.tag.GmsTaskScheduler=S
+persist.log.tag.DatabaseUtils=S
+persist.log.tag.MM_OSAL=S
+persist.log.tag.ShortcutService=S
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
