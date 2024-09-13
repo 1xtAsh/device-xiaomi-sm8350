@@ -132,4 +132,7 @@
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
 </resources>
