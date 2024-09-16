@@ -64,7 +64,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-            ;;
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
