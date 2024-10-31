@@ -60,6 +60,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libcrypto_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         vendor/etc/media_lahaina/video_system_specs.json \
         |vendor/etc/media_shima_v1/video_system_specs.json \
         |vendor/etc/media_yupik_v1/video_system_specs.json)
