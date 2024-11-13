@@ -219,6 +219,9 @@ vendor.gralloc.disable_ubwc=0
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+# Game FrameRate
+debug.graphics.game_default_frame_rate.disabled=true
+
 # Media
 debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
