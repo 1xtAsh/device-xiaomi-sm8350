@@ -407,4 +407,5 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac_vendor
+    libwfdaac_vendor \
+    android.hardware.wifi.hostapd-V1-ndk.vendor
