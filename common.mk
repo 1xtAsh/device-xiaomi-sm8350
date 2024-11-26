@@ -175,6 +175,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# GPS
+PRODUCT_PACKAGES += \
+    libcurl.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
