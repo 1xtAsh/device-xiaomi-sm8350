@@ -138,4 +138,7 @@
     
     <!-- True if home app should be pinned via Pinner Service -->
     <bool name="config_pinnerHomeApp">false</bool>
+    
+    <!-- True if camera app should be pinned via Pinner Service -->
+    <bool name="config_pinnerCameraApp">false</bool>
 </resources>
