@@ -135,4 +135,7 @@
 
     <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
     <integer name="config_aodMaxRefreshRate">60</integer>
+    
+    <!-- True if home app should be pinned via Pinner Service -->
+    <bool name="config_pinnerHomeApp">false</bool>
 </resources>
