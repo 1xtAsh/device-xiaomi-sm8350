@@ -66,12 +66,12 @@ public class DcDimmingService extends Service {
     }
 
     private void updateDcDimming() {
-        final int enabled = Settings.System.getInt(getContentResolver(),
-                Settings.System.DC_DIMMING_STATE, 0);
+        final boolean enabled = Settings.System.getIntForUser(getContentResolver(),
+                DC_DIMMING_STATE, 0, UserHandle.USER_CURRENT) == 1;
         if (DEBUG) Log.d(TAG, "updateDcDimming: enabled=" + enabled);
         try {
             DfWrapper.setDisplayFeature(
-                    new DfWrapper.DfParams(/*DC_BACKLIGHT_STATE*/ 20, enabled, 0));
+                    new DfWrapper.DfParams(/*DC_BACKLIGHT_STATE*/ 20, enabled ? 1 : 0, 0));
         } catch (Exception e) {
             Log.e(TAG, "updateDcDimming failed!", e);
         }
