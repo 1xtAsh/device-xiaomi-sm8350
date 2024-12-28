@@ -7,6 +7,7 @@
 
 #define LOG_TAG "UdfpsHandler.xiaomi13"
 
+#include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
 
@@ -40,6 +41,8 @@
 #define DISP_FEATURE_PATH "/dev/mi_display/disp_feature"
 
 #define FOD_PRESS_STATUS_PATH "/sys/class/touch/touch_dev/fod_press_status"
+
+using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
 namespace {
 
@@ -206,7 +209,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 
     void onAcquired(int32_t result, int32_t vendorCode) {
         LOG(DEBUG) << __func__ << " result: " << result << " vendorCode: " << vendorCode;
-        if (result == FINGERPRINT_ACQUIRED_GOOD) {
+        if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
             setFingerDown(false);
         }
     }
