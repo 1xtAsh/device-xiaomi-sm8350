@@ -1,73 +1,93 @@
-/*
- * Copyright (C) 2024 The LineageOS Project
+/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
+
+#ifndef __UAPI__XIAOMI__TOUCH_H
+#define __UAPI__XIAOMI__TOUCH_H
+
+#include <linux/ioctl.h>
+#include <linux/types.h>
+
+/**
+ * enum touch_mode: - Defines various modes supported by the touchscreen driver.
+ * @TOUCH_MODE_SINGLETAP_GESTURE: Enables or disables the single-tap gesture.
+ * @TOUCH_MODE_DOUBLETAP_GESTURE: Enables or disables the double-tap gesture.
+ * @TOUCH_MODE_FOD_PRESS_GESTURE: Enables or disabled the fingerprint-on-display press gesture.
+ * @TOUCH_MODE_FOD_FINGER_STATE: Sysfs node that just reports what it gets told from userspace.
+ * @TOUCH_MODE_NONUI_MODE: Disables or enables currently enabled gestures.
+ * @TOUCH_MODE_REPORT_RATE: Configures the touchscreen sampling rate.
+ * @TOUCH_MODE_FOLD_STATUS: Informs the xiaomi touch driver about current fold status.
+ * @TOUCH_MODE_NUM: Represents the total number of supported modes.
  *
- * SPDX-License-Identifier: Apache-2.0
+ * This enumeration is used to identify modes when configuring or querying
+ * the touchscreen driver via IOCTL commands.
+ */
+enum touch_mode {
+	TOUCH_MODE_SINGLETAP_GESTURE,
+	TOUCH_MODE_DOUBLETAP_GESTURE,
+	TOUCH_MODE_FOD_PRESS_GESTURE,
+	TOUCH_MODE_FOD_FINGER_STATE,
+	TOUCH_MODE_NONUI_MODE,
+	TOUCH_MODE_REPORT_RATE,
+	TOUCH_MODE_FOLD_STATUS,
+	TOUCH_MODE_NUM,
+};
+
+/**
+ * enum touch_mode_cmd: - Defines commands for interacting with touchscreen modes.
+ * @TOUCH_MODE_SET: Sets the current value for the specified mode.
+ * @TOUCH_MODE_GET: Retrieves the current value of the specified mode.
+ *
+ * These commands are used with the IOCTL interface to configure or query
+ * touchscreen driver modes.
+ */
+enum touch_mode_cmd {
+	TOUCH_MODE_SET,
+	TOUCH_MODE_GET,
+};
+
+/**
+ * struct touch_mode_request: - Represents a request to set or get a mode value.
+ * @mode: The mode to configure or query (see enum touch_mode).
+ * @value: The value to set or retrieve for the mode.
+ *
+ * This structure is passed between user space and kernel space through
+ * IOCTL commands for touchscreen mode configuration.
+ */
+struct touch_mode_request {
+	enum touch_mode mode;
+	int value;
+};
+
+/**
+ * enum touch_fold_status: - Represents the fold status.
+ * @TOUCH_FOLD_STATUS_UNFOLDED: Fold status where the primary touchscreen is active.
+ * @TOUCH_FOLD_STATUS_FOLDED: Fold status where the secondary touchscreen is active.
+ *
+ * These are the supported values for TOUCH_MODE_FOLD_STATUS requests.
+ */
+enum touch_fold_status {
+	TOUCH_FOLD_STATUS_UNFOLDED,
+	TOUCH_FOLD_STATUS_FOLDED,
+	TOUCH_FOLD_STATUS_NUM,
+};
+
+/*
+ * IOCTL definitions for touchscreen configuration.
+ * Used by user space applications to communicate with the kernel driver.
  */
 
-#ifndef __LINUX__XIAOMI__TOUCH_H
-#define __LINUX__XIAOMI__TOUCH_H
+/**
+ * TOUCH_IOC_SET_CUR_VALUE: - IOCTL command to set the value of a mode.
+ * Expects a struct touch_mode_request containing the mode and value.
+ */
+#define TOUCH_IOC_SET_CUR_VALUE                                                \
+	_IOW('T', TOUCH_MODE_SET, struct touch_mode_request)
 
-#include <linux/types.h>
-#include <asm/ioctl.h>
+/**
+ * TOUCH_IOC_GET_CUR_VALUE: - IOCTL command to get the value of a mode.
+ * Expects a struct touch_mode_request and fills its value field with the
+ * current mode value.
+ */
+#define TOUCH_IOC_GET_CUR_VALUE                                                \
+	_IOR('T', TOUCH_MODE_GET, struct touch_mode_request)
 
-#define MAX_BUF_SIZE 256
-#define MAX_TOUCH_ID 10
-#define THP_CMD_BASE 1000
-
-enum MODE_CMD {
-	SET_CUR_VALUE = 0,
-	GET_CUR_VALUE,
-	GET_DEF_VALUE,
-	GET_MIN_VALUE,
-	GET_MAX_VALUE,
-	GET_MODE_VALUE,
-	RESET_MODE,
-	SET_LONG_VALUE,
-};
-
-enum MODE_TYPE {
-	Touch_Game_Mode = 0,
-	Touch_Active_MODE = 1,
-	Touch_UP_THRESHOLD = 2,
-	Touch_Tolerance = 3,
-	Touch_Aim_Sensitivity = 4,
-	Touch_Tap_Stability = 5,
-	Touch_Expert_Mode = 6,
-	Touch_Edge_Filter = 7,
-	Touch_Panel_Orientation = 8,
-	Touch_Report_Rate = 9,
-	Touch_Fod_Enable = 10,
-	Touch_Aod_Enable = 11,
-	Touch_Resist_RF = 12,
-	Touch_Idle_Time = 13,
-	Touch_Doubletap_Mode = 14,
-	Touch_Grip_Mode = 15,
-	Touch_FodIcon_Enable = 16,
-	Touch_Nonui_Mode = 17,
-	Touch_Debug_Level = 18,
-	Touch_Power_Status = 19,
-	Touch_Fod_Longpress_Gesture,
-	Touch_Singletap_Gesture,
-	Touch_Mode_NUM,
-	THP_LOCK_SCAN_MODE = THP_CMD_BASE + 0,
-	THP_FOD_DOWNUP_CTL = THP_CMD_BASE + 1,
-	THP_SELF_CAP_SCAN = THP_CMD_BASE + 2,
-	THP_REPORT_POINT_SWITCH = THP_CMD_BASE + 3,
-	THP_HAL_INIT_READY = THP_CMD_BASE + 4,
-	THP_HAL_VSYNC_MODE = THP_CMD_BASE + 9,
-	THP_HAL_CHARGING_STATUS = THP_CMD_BASE + 10,
-	THP_HAL_REPORT_RATE = THP_CMD_BASE + 11,
-	THP_HAL_DISPLAY_FPS = THP_CMD_BASE + 12,
-	THP_KNOCK_FRAME_COUNT = THP_CMD_BASE + 13,
-	THP_HAL_TOUCH_SENSOR = THP_CMD_BASE + 15,
-	THP_NORMALIZE_FREQ_SCAN = THP_CMD_BASE + 68,
-	THP_NORMALIZE_K_REQUEST = THP_CMD_BASE + 69,
-	THP_NORMALIZE_B_REQUEST = THP_CMD_BASE + 70,
-	THP_IDLE_BASALINE_UPDATE = THP_CMD_BASE + 71,
-};
-
-#define TOUCH_MAGIC 'T'
-#define TOUCH_IOC_SET_CUR_VALUE _IO(TOUCH_MAGIC, SET_CUR_VALUE)
-#define TOUCH_IOC_GET_CUR_VALUE _IO(TOUCH_MAGIC, GET_CUR_VALUE)
-
-#endif
+#endif /* __UAPI__XIAOMI__TOUCH_H */
