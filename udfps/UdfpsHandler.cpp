@@ -18,6 +18,7 @@
 
 #include "mi_disp.h"
 #include "UdfpsHandler.h"
+#include "xiaomi_touch.h"
 
 #define COMMAND_NIT 10
 #define TARGET_BRIGHTNESS_OFF 0
@@ -33,6 +34,7 @@
 #define PARAM_FOD_RELEASED 0
 
 #define DISP_FEATURE_PATH "/dev/mi_display/disp_feature"
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 
 using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
@@ -72,6 +74,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
     void init(fingerprint_device_t* device) {
         mDevice = device;
         disp_fd_ = android::base::unique_fd(open(DISP_FEATURE_PATH, O_RDWR));
+        touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
 
         // Thread to listen for fod ui changes
         std::thread([this]() {
@@ -133,6 +136,13 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
         mDevice->extCmd(mDevice, COMMAND_FOD_PRESS_Y, y);
         mDevice->extCmd(mDevice, COMMAND_FOD_PRESS_STATUS, PARAM_FOD_PRESSED);
 
+        // Update fod_finger_state node in case hwmodule polls it
+        struct touch_mode_request touchRequest = {
+                .mode = TOUCH_MODE_FOD_FINGER_STATE,
+                .value = 1,
+        };
+        ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &touchRequest);
+
         // Request HBM
         disp_local_hbm_req req;
         req.base.flag = 0;
@@ -154,6 +164,13 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
         req.base.disp_id = MI_DISP_PRIMARY;
         req.local_hbm_value = LHBM_TARGET_BRIGHTNESS_OFF_FINGER_UP;
         ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
+
+        // Update fod_finger_state node in case hwmodule polls it
+        struct touch_mode_request touchRequest = {
+                .mode = TOUCH_MODE_FOD_FINGER_STATE,
+                .value = 0,
+        };
+        ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &touchRequest);
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
@@ -170,6 +187,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
   private:
     fingerprint_device_t* mDevice;
     android::base::unique_fd disp_fd_;
+    android::base::unique_fd touch_fd_;
 };
 
 static UdfpsHandler* create() {
