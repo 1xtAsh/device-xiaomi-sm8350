@@ -143,7 +143,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service.xml
 
 PRODUCT_PACKAGES += \
-    libqdMetaData.system \
     memtrack.default
 
 PRODUCT_COPY_FILES += \
