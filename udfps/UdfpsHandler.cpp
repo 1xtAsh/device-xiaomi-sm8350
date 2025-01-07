@@ -91,11 +91,11 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             }
 
             // Register for FOD events
-            disp_event_req req;
-            req.base.flag = 0;
-            req.base.disp_id = MI_DISP_PRIMARY;
-            req.type = MI_DISP_EVENT_FOD;
-            ioctl(fd, MI_DISP_IOCTL_REGISTER_EVENT, &req);
+            struct disp_event_req displayEventRequest = {
+                    .base = displayBasePrimary,
+                    .type = MI_DISP_EVENT_FOD,
+            };
+            ioctl(fd, MI_DISP_IOCTL_REGISTER_EVENT, &displayEventRequest);
 
             struct pollfd dispEventPoll = {
                     .fd = fd,
