@@ -40,6 +40,7 @@ function lib_to_package_fixup_odm_variants() {
         libsdmextension)
             echo "$1_sm8550"
             ;;
+        sqlite3 | \
         vendor.xiaomi.hardware.fx.tunnel@1.0 | \
         vendor.xiaomi.hardware.mfidoca@1.0 | \
         vendor.xiaomi.hardware.mlipay@1.[0-1] | \
