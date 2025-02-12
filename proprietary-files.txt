@@ -618,6 +618,7 @@ vendor/etc/gps.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so;MODULE_SUFFIX=_sm8550;OVERRIDES=android.hardware.gnss-aidl-impl-qti
 vendor/lib64/libMiVDR.so
 vendor/lib64/libbatching.so
 vendor/lib64/libcdfw.so
