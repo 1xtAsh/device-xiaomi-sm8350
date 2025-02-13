@@ -722,8 +722,6 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so;MODULE_SUFFIX=_vendor
 
 # Media
-odm/etc/media_profiles_kalama.xml:vendor/etc/media_profiles_kalama.xml
-odm/etc/media_profiles_kalama.xml
 vendor/bin/hw/qconfigservice
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
