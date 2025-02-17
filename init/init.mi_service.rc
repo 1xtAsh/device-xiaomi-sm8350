@@ -47,7 +47,9 @@ on boot
     chown system system /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
     chown system system /sys/class/touch/touch_dev/gesture_double_tap_enabled
     chown system system /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chown system system /sys/class/touch/touch_dev/panel_orientation
     chmod 0660 /sys/class/touch/touch_dev/fod_finger_state
     chmod 0660 /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
     chmod 0664 /sys/class/touch/touch_dev/gesture_double_tap_enabled
     chmod 0664 /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chmod 0664 /sys/class/touch/touch_dev/panel_orientation

@@ -5,10 +5,8 @@ app_domain(parts_app)
 
 binder_use(parts_app)
 
-hal_client_domain(parts_app, hal_touchfeature_xiaomi)
 hal_client_domain(parts_app, vendor_hal_displayfeature_xiaomi)
 
-binder_call(parts_app, hal_touchfeature_xiaomi)
 binder_call(parts_app, vendor_hal_displayfeature_xiaomi)
 
 allow parts_app {
@@ -33,7 +31,6 @@ allow parts_app {
 }:service_manager find;
 
 allow parts_app {
-  hal_touchfeature_xiaomi_hwservice
   vendor_hal_displayfeature_xiaomi_hwservice
 }:hwservice_manager find;
 
@@ -45,3 +42,4 @@ allow parts_app system_app_data_file:{
 
 allow parts_app sysfs_tp_fodstatus:dir r_dir_perms;
 allow parts_app sysfs_tp_fodstatus:file r_file_perms;
+allow parts_app sysfs_tp_touchfeature:file rw_file_perms;

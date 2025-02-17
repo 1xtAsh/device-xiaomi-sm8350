@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public final class FileUtils {
@@ -47,5 +48,31 @@ public final class FileUtils {
             Log.e(TAG, "Could not convert string to int from file " + fileName, e);
         }
         return 0;
+    }
+
+    public static void writeLine(String fileName, String value) {
+        BufferedWriter writer = null;
+        try {
+            writer = new BufferedWriter(new FileWriter(fileName));
+            writer.write(value);
+        } catch (FileNotFoundException e) {
+            Log.w(TAG, "No such file " + fileName + " for writing", e);
+        } catch (IOException e) {
+            Log.e(TAG, "Could not write to file " + fileName, e);
+        } finally {
+            try {
+                if (writer != null) {
+                    writer.close();
+                }
+            } catch (IOException e) { }
+        }
+    }
+
+    public static void writeLine(String fileName, int value) {
+        writeLine(fileName, Integer.toString(value));
+    }
+
+    public static void writeLine(String fileName, float value) {
+        writeLine(fileName, Float.toString(value));
     }
 }

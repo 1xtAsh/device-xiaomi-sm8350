@@ -48,8 +48,7 @@ function lib_to_package_fixup_odm_variants() {
         vendor.xiaomi.hardware.tidaservice@1.[0-2])
             echo "$1_odm"
             ;;
-        vendor.xiaomi.hardware.fingerprintextension | \
-        vendor.xiaomi.hw.touchfeature@1.0)
+        vendor.xiaomi.hardware.fingerprintextension)
             echo "$1_vendor"
             ;;
         *)
@@ -139,8 +138,7 @@ function lib_to_package_fixup_vendor_variants() {
         vendor.qti.imsrtpservice@3.[0-1] | \
         vendor.qti.latency@2.[0-3] | \
         vendor.xiaomi.hardware.displayfeature@1.0 | \
-        vendor.xiaomi.hardware.fingerprintextension@1.0 | \
-        vendor.xiaomi.hw.touchfeature@1.0)
+        vendor.xiaomi.hardware.fingerprintextension@1.0)
             echo "$1_vendor"
             ;;
         libcamxcommonutils | \

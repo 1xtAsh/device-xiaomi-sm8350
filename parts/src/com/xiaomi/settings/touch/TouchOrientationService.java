@@ -14,6 +14,8 @@ import android.os.IBinder;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.xiaomi.settings.utils.FileUtils;
+
 public class TouchOrientationService extends Service {
 
     private static final String TAG = "XiaomiPartsTouchOrientationService";
@@ -55,8 +57,7 @@ public class TouchOrientationService extends Service {
         if (DEBUG) Log.d(TAG, "updateTpOrientation: rotation=" + rotation);
 
         // Lucky for us, Surface.ROTATION_* directly translates into touchpanel values
-        TfWrapper.setTouchFeature(
-                new TfWrapper.TfParams(/*TOUCH_PANEL_ORIENTATION*/ 8, rotation));
+        FileUtils.writeLine("/sys/class/touch/touch_dev/panel_orientation", rotation);
     }
 
 }
