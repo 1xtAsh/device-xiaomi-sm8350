@@ -384,6 +384,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/xiaomi \
     hardware/lineage/interfaces/power-libperfmgr \
+		hardware/qcom-caf/bootctrl \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
