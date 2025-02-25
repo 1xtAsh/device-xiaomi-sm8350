@@ -8,13 +8,12 @@
 
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
+#include <linux/xiaomi_touch.h>
 #include <poll.h>
 #include <sys/ioctl.h>
 
 #include "NonUiNotifier.h"
 #include "SensorNotifierUtils.h"
-
-#include "xiaomi_touch.h"
 
 #define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 

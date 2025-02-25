@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "UdfpsHandler.xiaomi13"
+#define LOG_TAG "UdfpsHandler.xiaomi_sm8550"
 
 #include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
@@ -16,9 +16,10 @@
 #include <fstream>
 #include <thread>
 
-#include "mi_disp.h"
+#include <display/drm/mi_disp.h>
+#include <linux/xiaomi_touch.h>
+
 #include "UdfpsHandler.h"
-#include "xiaomi_touch.h"
 
 #define COMMAND_NIT 10
 #define TARGET_BRIGHTNESS_OFF 0

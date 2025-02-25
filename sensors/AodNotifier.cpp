@@ -8,13 +8,12 @@
 
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
+#include <display/drm/mi_disp.h>
 #include <poll.h>
 #include <sys/ioctl.h>
 
 #include "AodNotifier.h"
 #include "SensorNotifierUtils.h"
-
-#include <mi_disp.h>
 
 #define DISP_FEATURE_PATH "/dev/mi_display/disp_feature"
 
