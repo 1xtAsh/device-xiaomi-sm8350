@@ -91,7 +91,10 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-		
+
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey \
