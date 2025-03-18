@@ -1,4 +1,4 @@
-# Unpinned blobs from fuxi_global-user 13 TKQ1.221114.001 OS2.0.2.0.VMCMIXM release-keys
+# Unpinned blobs from fuxi_global-user 13 TKQ1.221114.001 OS2.0.100.0.VMCMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
