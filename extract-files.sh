@@ -70,6 +70,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        system_ext/bin/wfdservice64)
+            [ "$2" = "" ] && return 0
+            grep -q "libwfdservice_shim.so" "${2}" || "${PATCHELF}" --add-needed "libwfdservice_shim.so" "${2}"
+            ;;
         system_ext/etc/init/wfdservice.rc)
             [ "$2" = "" ] && return 0
             sed -i "s/\b\(start\|stop\) wfdservice\b/\1 wfdservice64/g" "${2}"
