@@ -1047,7 +1047,7 @@ vendor/lib64/libtracker_6dof_impl.so
 
 # QXR
 vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
-vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # RIL
 vendor/app/IWlanService/IWlanService.apk
