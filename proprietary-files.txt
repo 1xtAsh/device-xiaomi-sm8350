@@ -534,7 +534,6 @@ vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libdrmutils.so
 vendor/lib64/libgpt.so
-vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
@@ -1066,8 +1065,6 @@ vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/bin/qti
-vendor/bin/qtigetprop
-vendor/bin/qtisetprop
 vendor/bin/rmt_storage
 vendor/bin/shsusrd
 vendor/bin/tftp_server
@@ -1200,7 +1197,6 @@ vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/librilqmimiscservices.so
 vendor/lib64/librmnetctl.so
-vendor/lib64/librpmb.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libxiaomi_qcril.so
 vendor/lib64/qcrilInterfaces.so
@@ -1302,8 +1298,6 @@ vendor/lib64/libqcbor.so
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/libesepmconfig.so
-vendor/lib64/libesesbprovision.so
 
 # Sensor Communicate
 odm/bin/hw/vendor.xiaomi.sensor.communicate@1.0-service
