@@ -1052,6 +1052,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # RIL
+system_ext/framework/mirilhook.jar
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon

@@ -18,6 +18,7 @@ import android.view.Display.HdrCapabilities;
 
 import com.xiaomi.settings.display.ColorModeService;
 import com.xiaomi.settings.display.DcDimmingService;
+import com.xiaomi.settings.telephony.EsimController;
 import com.xiaomi.settings.touch.TouchOrientationService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -57,5 +58,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     }
 
     private static void onBootCompleted(Context context) {
+        // Telephony
+        EsimController.Companion.getInstance(context).onBootCompleted();
     }
 }

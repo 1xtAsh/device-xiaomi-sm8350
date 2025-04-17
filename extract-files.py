@@ -197,6 +197,8 @@ blob_fixups: blob_fixups_user_type = {
             'libcrypto.so',
             'libcrypto-v33.so',
         ),
+    'system_ext/framework/mirilhook.jar': blob_fixup()
+        .apktool_patch('blob-patches/mirilhook.patch', '-r'),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/lib64/libqtikeymint.so',

@@ -23,11 +23,13 @@ allow parts_app {
   hint_service
   media_session_service
   netstats_service
+  radio_service
   trust_service
   sensorservice_service
   surfaceflinger_service
   vendor_perf_service
   vibrator_manager_service
+  voiceinteraction_service
 }:service_manager find;
 
 allow parts_app {

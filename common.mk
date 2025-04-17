@@ -259,6 +259,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl

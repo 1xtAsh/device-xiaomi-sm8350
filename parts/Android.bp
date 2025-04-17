@@ -7,13 +7,18 @@
 android_app {
     name: "XiaomiParts",
     certificate: "platform",
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt"
+    ],
     platform_apis: true,
     privileged: true,
     system_ext_specific: true,
     static_libs: [
         "androidx.core_core",
+        "androidx.preference_preference",
         "SettingsLib",
+        "qcrilhook",
         "vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
     required: [
