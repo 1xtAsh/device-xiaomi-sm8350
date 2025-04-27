@@ -136,6 +136,9 @@ function configure_memory_parameters() {
 	if [ $MemTotal -le 8388608 ]; then
 		echo 0 > /proc/sys/vm/watermark_boost_factor
 	fi
+	
+	#Spawn 1 kswapd threads to reduce CPU usage and improve system smoothness
+	echo 1 > /proc/sys/vm/kswapd_threads
 }
 
 rev=`cat /sys/devices/soc0/revision`
