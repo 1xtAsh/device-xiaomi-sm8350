@@ -325,6 +325,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_BOARD_PLATFORM := sm8350
 
 # Power
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
