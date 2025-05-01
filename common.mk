@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
     libion.vendor \
     libpng.vendor \
     libutilscallstack.vendor \
+    liblz4.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
