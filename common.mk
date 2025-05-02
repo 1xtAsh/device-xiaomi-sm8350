@@ -94,7 +94,8 @@ PRODUCT_COPY_FILES += \
 
 # display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@3.0.vendor
+    android.hardware.graphics.allocator@3.0.vendor \
+    vendor.qti.hardware.memtrack-service
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
