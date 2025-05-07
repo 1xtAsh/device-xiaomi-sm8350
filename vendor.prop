@@ -223,7 +223,7 @@ vendor.gralloc.disable_ubwc=0
 
 # HWUI
 debug.hwui.use_hint_manager=true
-debug.hwui.target_cpu_time_percent=30
+debug.hwui.target_cpu_time_percent=20
 
 # Game FrameRate
 debug.graphics.game_default_frame_rate.disabled=true
