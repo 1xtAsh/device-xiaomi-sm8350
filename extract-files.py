@@ -187,7 +187,10 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/lib64/hw/displayfeature.default.so': blob_fixup()
+    (
+        'odm/lib64/hw/displayfeature.default.so',
+        'vendor/lib64/hw/audio.primary.kalama.so',
+    ): blob_fixup()
         .replace_needed(
             'libstagefright_foundation.so',
             'libstagefright_foundation-v33.so',
@@ -204,13 +207,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
-    (
-        'vendor/bin/hw/dolbycodec2',
-        'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',
-        'vendor/bin/hw/vendor.dolby.media.c2@1.0-service', 
-        'vendor/lib64/hw/audio.primary.kalama.so',
-    ): blob_fixup()
-        .add_needed('libstagefright_foundation-v33.so'),
     'vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy': blob_fixup()
         .add_line_if_missing('setsockopt: 1'),
     'vendor/etc/seccomp_policy/qwesd@2.0.policy': blob_fixup()
