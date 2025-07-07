@@ -63,7 +63,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     $(COMMON_PATH)/hidl/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/yaap/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/hidl/manifest_lahaina.xml \
@@ -134,9 +134,6 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
-
-# Platform
-TARGET_BOARD_PLATFORM := lahaina
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
