@@ -137,11 +137,6 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
-    write /dev/cpuset/audio-app/cpus 1-2
-    # init the  cpuset value for the camera background,don't change the oder
-    write /dev/cpuset/camera-background/background/cpus 0-2
-    write /dev/cpuset/camera-background/cpus 0-3
-
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
 

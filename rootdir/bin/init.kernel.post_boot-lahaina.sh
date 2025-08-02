@@ -188,12 +188,6 @@ echo 10 10 10 10 10 10 10 95 > /proc/sys/kernel/sched_coloc_busy_hyst_cpu_busy_p
 # binder activity tasks
 echo 325 > /proc/sys/kernel/walt_low_latency_task_threshold
 
-# cpuset parameters
-echo 0-1 > /dev/cpuset/background/cpus
-echo 0-3 > /dev/cpuset/restricted/cpus
-echo 0-3 > /dev/cpuset/system-background/cpus
-echo 1-2 > /dev/cpuset/audio-app/cpus
-
 # configure governor settings for silver cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
