@@ -9,7 +9,6 @@ debug.hwui.skia_atrace_enabled=false
 
 # Graphics
 debug.sf.enable_hwc_vds=1
-ro.config.avoid_gfx_accel=true
 
 # FS-verity
 ro.apk_verity.mode=2
