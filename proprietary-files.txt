@@ -454,6 +454,9 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# Power-off charging daemon - from haydn OS816.0.12.0.UKKCNXM
+system/bin/charger:system/bin/chargeonlymode|398b5583f47d90b8e9f9af53ce6e9fad
+
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
