@@ -167,9 +167,6 @@ persist.vendor.dpmhalservice.enable=1
 ro.usb.uvc.disable_video_encode_flag=true
 ro.usb.uvc.enabled=true
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
